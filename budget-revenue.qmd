@@ -1,0 +1,31 @@
+---
+title: "Budget and Revenue"
+---
+
+## Budget vs. Revenue
+
+This page compares the budgets versus revenues of films in the dataset. @fig-budget-revenue shows the relationship between how much a film costs to produce and how much revenue it earns.
+
+```{python}
+#| label: fig-budget-revenue
+#| echo: true
+#| fig-cap: "Relationship between film budgets and worldwide revenues."
+
+# import libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# load dataset
+films = pd.read_csv("films.csv")
+
+# make scatter plot
+plt.scatter(films["budget_musd"], films["revenue_musd"])
+
+# adding labels
+plt.xlabel("Budget (Million USD)")
+plt.ylabel("Revenue (Million USD)")
+plt.title("Film Budget vs. Revenue")
+
+# display plot
+plt.show()
+```

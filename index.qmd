@@ -1,0 +1,17 @@
+---
+title: "Box Office Numbers"
+---
+
+## About the Dataset
+
+This website explores a dataset of different films released over the years. The dataset includes information about film's budget, runtime, and IMDb rating. We use this information to explore patterns and compare different films.
+
+## Analysis Pages
+
+- [Budget and Revenue](budget-revenue.qmd)
+- [Runtime and Ratings](runtime-rating.qmd)
+- [The Bond Films](bond.qmd)
+
+## AI Tools Used
+
+I used ChatGPT to troubleshoot commands and help make descriptions for the different pages.
