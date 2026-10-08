@@ -1,0 +1,32 @@
+
+brew upgrade gh
+gh auth status
+git clone https://github.com/stanley-yoo/datasci350-quiz02
+cd datasci350-quiz02
+ls
+quarto create project website .
+ls -a
+pwd
+printf '/_site/\n__pycache__/\n' >> .gitignore
+cat .gitignore
+git add .gitignore
+git commit -m "Add gitignore"
+git status
+rm about.qmd
+touch budget-revenue.qmd
+touch runtime-rating.qmd
+touch bond.qmd
+quarto render
+ls -a
+ls _freeze
+git status
+git add .
+git commit -m "Add site pages and freeze"
+git status
+git push
+quarto publish gh-pages
+history | tail -50 > commands.txt
+git add commands.txt
+git commit -m "Add command log"
+git push
+Publishing route: quarto publish gh-pages
