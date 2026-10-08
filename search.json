@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "budget-revenue.html",
+    "href": "budget-revenue.html",
+    "title": "Budget and Revenue",
+    "section": "",
+    "text": "This page compares the budgets versus revenues of films in the dataset. Figure 1 shows the relationship between how much a film costs to produce and how much revenue it earns.\n\n# import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# load dataset\nfilms = pd.read_csv(\"films.csv\")\n\n# make scatter plot\nplt.scatter(films[\"budget_musd\"], films[\"revenue_musd\"])\n\n# adding labels\nplt.xlabel(\"Budget (Million USD)\")\nplt.ylabel(\"Revenue (Million USD)\")\nplt.title(\"Film Budget vs. Revenue\")\n\n# display plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Relationship between film budgets and worldwide revenues."
+  },
+  {
+    "objectID": "budget-revenue.html#budget-vs.-revenue",
+    "href": "budget-revenue.html#budget-vs.-revenue",
+    "title": "Budget and Revenue",
+    "section": "",
+    "text": "This page compares the budgets versus revenues of films in the dataset. Figure 1 shows the relationship between how much a film costs to produce and how much revenue it earns.\n\n# import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# load dataset\nfilms = pd.read_csv(\"films.csv\")\n\n# make scatter plot\nplt.scatter(films[\"budget_musd\"], films[\"revenue_musd\"])\n\n# adding labels\nplt.xlabel(\"Budget (Million USD)\")\nplt.ylabel(\"Revenue (Million USD)\")\nplt.title(\"Film Budget vs. Revenue\")\n\n# display plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Relationship between film budgets and worldwide revenues."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Box Office Numbers",
+    "section": "",
+    "text": "This website explores a dataset of different films released over the years. The dataset includes information about film’s budget, runtime, and IMDb rating. We use this information to explore patterns and compare different films."
+  },
+  {
+    "objectID": "index.html#about-the-dataset",
+    "href": "index.html#about-the-dataset",
+    "title": "Box Office Numbers",
+    "section": "",
+    "text": "This website explores a dataset of different films released over the years. The dataset includes information about film’s budget, runtime, and IMDb rating. We use this information to explore patterns and compare different films."
+  },
+  {
+    "objectID": "index.html#analysis-pages",
+    "href": "index.html#analysis-pages",
+    "title": "Box Office Numbers",
+    "section": "Analysis Pages",
+    "text": "Analysis Pages\n\nBudget and Revenue\nRuntime and Ratings\nThe Bond Films"
+  },
+  {
+    "objectID": "index.html#ai-tools-used",
+    "href": "index.html#ai-tools-used",
+    "title": "Box Office Numbers",
+    "section": "AI Tools Used",
+    "text": "AI Tools Used\nI used ChatGPT to troubleshoot commands and help make descriptions for the different pages."
+  },
+  {
+    "objectID": "runtime-rating.html",
+    "href": "runtime-rating.html",
+    "title": "Runtime and Ratings",
+    "section": "",
+    "text": "This page explores the relationship between film runtime and IMDb ratings. Figure 1 shows whether longer films tend to receive higher or lower ratings.\n\n# import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# load dataset\nfilms = pd.read_csv(\"films.csv\")\n\n# make scatter plot\nplt.scatter(films[\"runtime_min\"], films[\"imdb_rating\"])\n\n# add labels\nplt.xlabel(\"Runtime (Minutes)\")\nplt.ylabel(\"IMDb Rating\")\nplt.title(\"Film Runtime vs. IMDb Rating\")\n\n# display plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Relationship between film runtime and IMDb ratings."
+  },
+  {
+    "objectID": "runtime-rating.html#runtime-vs.-imdb-ratings",
+    "href": "runtime-rating.html#runtime-vs.-imdb-ratings",
+    "title": "Runtime and Ratings",
+    "section": "",
+    "text": "This page explores the relationship between film runtime and IMDb ratings. Figure 1 shows whether longer films tend to receive higher or lower ratings.\n\n# import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# load dataset\nfilms = pd.read_csv(\"films.csv\")\n\n# make scatter plot\nplt.scatter(films[\"runtime_min\"], films[\"imdb_rating\"])\n\n# add labels\nplt.xlabel(\"Runtime (Minutes)\")\nplt.ylabel(\"IMDb Rating\")\nplt.title(\"Film Runtime vs. IMDb Rating\")\n\n# display plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Relationship between film runtime and IMDb ratings."
+  },
+  {
+    "objectID": "runtime-rating.html#mean-imdb-rating-by-decade",
+    "href": "runtime-rating.html#mean-imdb-rating-by-decade",
+    "title": "Runtime and Ratings",
+    "section": "Mean IMDb Rating by Decade",
+    "text": "Mean IMDb Rating by Decade\nThe following table shows the average IMDb rating for films released in each decade.\n\nfilms[\"decade\"] = films[\"year\"] // 10 * 10\n\nfilms.groupby(\"decade\")[\"imdb_rating\"].mean().round(2)\n\ndecade\n1980    8.01\n1990    7.70\n2000    7.94\n2010    7.83\n2020    7.44\nName: imdb_rating, dtype: float64"
+  },
+  {
+    "objectID": "bond.html",
+    "href": "bond.html",
+    "title": "The Bond Films",
+    "section": "",
+    "text": "This page explores how revenue for James Bond films has changed over time.\n\n# import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# load dataset\nfilms = pd.read_csv(\"films.csv\")\n\n# choose only James Bond films\nbond = films[films[\"franchise\"] == \"James Bond\"]\n\n# sorting films by release year\nbond = bond.sort_values(\"year\")"
+  },
+  {
+    "objectID": "bond.html#james-bond-film-revenue",
+    "href": "bond.html#james-bond-film-revenue",
+    "title": "The Bond Films",
+    "section": "",
+    "text": "This page explores how revenue for James Bond films has changed over time.\n\n# import libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# load dataset\nfilms = pd.read_csv(\"films.csv\")\n\n# choose only James Bond films\nbond = films[films[\"franchise\"] == \"James Bond\"]\n\n# sorting films by release year\nbond = bond.sort_values(\"year\")"
+  },
+  {
+    "objectID": "bond.html#revenue-over-time",
+    "href": "bond.html#revenue-over-time",
+    "title": "The Bond Films",
+    "section": "Revenue Over Time",
+    "text": "Revenue Over Time\n\n# make line plot\nplt.plot(bond[\"year\"], bond[\"revenue_musd\"])\n\n# add labels\nplt.xlabel(\"Release Year\")\nplt.ylabel(\"Revenue (Million USD)\")\nplt.title(\"James Bond Film Revenue Over Time\")\n\n# display plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Worldwide revenue of James Bond films over time."
+  },
+  {
+    "objectID": "bond.html#release-years",
+    "href": "bond.html#release-years",
+    "title": "The Bond Films",
+    "section": "Release Years",
+    "text": "Release Years\nThe first James Bond film in this dataset was released in 1995, and the last was released in 2021."
+  }
+]
